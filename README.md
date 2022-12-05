@@ -37,3 +37,11 @@ and unregister the service worker.
 
 then, you can go to main menu and go back in and it should be fixed.<br>
 if not, then try reloading until it's fixed, i guess
+
+### > can i embed this on any other sites
+
+well no<br>
+1. because i hate it when people do that
+2. it's not even my game so why would i get to choose that
+
+loser
