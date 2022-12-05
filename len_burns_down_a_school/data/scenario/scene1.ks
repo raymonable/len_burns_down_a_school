@@ -6,7 +6,7 @@
 [tb_show_message_window  ]
 [chara_show  name="Len"  time="1000"  wait="true"  left="-52"  top="0"  width=""  height=""  reflect="true"  ]
 #Len
-1hey nerd[p]
+hey nerd[p]
 #
 Oh fuck not you.[p]
 #Len
