@@ -21,7 +21,7 @@ self.addEventListener('fetch', function (event) {
             if (censored) {
                 event.respondWith(fetch('censorship/'+directory+file));
             } else {
-                event.respondWith(fetch('nocensorship/'+directory+file));
+                return
             }
         } else {
             return;
