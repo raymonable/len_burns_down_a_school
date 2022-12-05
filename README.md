@@ -6,7 +6,8 @@
 
 ### > how do i play this super amazing visual novel
 
-[]()
+here u go:<br>
+[len burns down a school](https://raymonable.github.io/len_burns_down_a_school/)
 
 ### > didn't this already exist
 
