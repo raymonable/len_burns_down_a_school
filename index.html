@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <style>
+            @font-face {
+                font-family: "Roboto";
+                src: url(len_burns_down_a_school/data/font/Roboto.ttf)
+            }
+            * {
+                color: white;
+                font-family: "Roboto";
+                font-weight: normal;
+                font-size: 24px;
+                user-select: none;
+            }
+            body {
+                background: #14151c;
+                overflow: hidden;
+            }
+            iframe, .menu-bg, .menu {
+                border: none;
+                aspect-ratio: 3 / 2;
+                height: 100%;
+                width: auto;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+            }
+            .menu {
+                height: 97.5%;
+            }
+            .menu-bg {
+                pointer-events: none;
+                z-index: 0;
+            }
+            .settings {
+                width: 275px;
+                background: #29334a;
+                border-radius: 4px;
+                padding: 15px;
+                height: 50px;
+            }
+            .censorship {
+                text-align: right;
+                font-size: 18px;
+                cursor: pointer;
+            }
+            .start {
+                width: 195px;
+                background: #fc862b;
+                border-radius: 4px;
+                padding: 15px;
+                height: 35px;
+                position: absolute;
+                top: 75%;
+                left: 100%;
+                transform: translate(-100%, -75%);
+                cursor: pointer;
+            }
+        </style>
+        <link rel="icon" href="len_burns_down_a_school/tyrano/images/kag/smolllen.png">
+        <title>Len Burns Down a School</title>
+    </head>
+    <body>
+        <div class="container">
+            
+        </div>
+        <div class="menu" hidden>
+            <div class="settings">
+                len burns down a skule<br>
+                <div class="censorship">
+                    censrd words
+                </div>
+            </div>
+            <div class="start">
+                begin the lenening
+            </div>
+        </div>
+        <img src="len_burns_down_a_school/data/bgimage/tumblr_inline_nkzb6gDEnB1qji7vx.gif" class="menu-bg" hidden>
+        <script>
+            navigator.serviceWorker.register('worker.js').then(function (reg) {
+                // registration worked
+                console.log('Registration succeeded. Scope is ' + reg.scope);
+                
+            }).catch(function (error) {
+                // registration failed
+                console.log('Registration failed with ' + error);
+            });
+            navigator.serviceWorker.ready.then((reg) => {
+                reg.active.postMessage(!!!localStorage['censorship']);
+            })
+
+            const container = document.querySelector('.container');
+            const menu = document.querySelector('.menu');
+            function inject_game() {
+                container.innerHTML = '<iframe width="960" height="640" src="len_burns_down_a_school"></iframe>';
+            }
+            document.querySelector('.censorship').addEventListener('click', () => {
+                if (!!localStorage['censorship']) {
+                    localStorage.removeItem('censorship')
+                    document.querySelector('.censorship').innerText = "> censrd"
+                } else {
+                    localStorage.setItem('censorship', true);
+                    document.querySelector('.censorship').innerText = "> not censrd"
+                }
+            })
+            document.querySelector('.start').addEventListener('click', () => {
+                localStorage.setItem('menu_okay', true);
+                location.reload();
+            })
+            if (!!localStorage['menu_okay']) {
+                inject_game()
+            } else {
+                menu.removeAttribute('hidden');
+                document.querySelector('.menu-bg').removeAttribute('hidden')
+            }
+            if (!!!localStorage['censorship']) {     
+                document.querySelector('.censorship').innerText = "> censrd"
+            } else {
+                document.querySelector('.censorship').innerText = "> not censrd"
+            }
+        </script>
+    </body>
+</html>
