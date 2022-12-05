@@ -1,0 +1,6 @@
+[preload  storage="./data/bgimage/fc9d22a523ef57b1159c7667d05561da.jpg"  ]
+[preload  storage="./data/bgimage/d7572d9366917470a55a165d6215d97c.jpg"  ]
+[preload  storage="./data/bgimage/808cc39bb2f91b3f53a8b7494b7bc6bb.jpg"  ]
+[preload  storage="./data/bgimage/Monaco_fire_background.png"  ]
+[preload  storage="./data/fgimage/chara/2/img_MIKU_us.png"  ]
+[return]

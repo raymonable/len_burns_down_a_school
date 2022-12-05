@@ -1,0 +1,36 @@
+{
+	var throw_system_not_found =
+		function
+		{
+			throw new Exception(
+				"�V�X�e����������܂���\n"
+				"���̏Љ�p�X�N���v�g�́A�t�H���_/�t�@�C���\����\n"
+				"KAG�̔z�z���Ɠ����łȂ��Ɛ���ɓ��삵�܂���B");
+		};
+
+	if(Storages.isExistentStorage("../kag3/scenario/snow.ks"))
+		Storages.addAutoPath("../kag3/scenario/"),
+		Storages.addAutoPath("../kag3/image/");
+	else if(Storages.isExistentStorage("../kag3plugin/snow/scenario/snow.ks"))
+		Storages.addAutoPath("../kag3plugin/snow/scenario/"),
+		Storages.addAutoPath("../kag3plugin/snow/image/");
+	else
+		throw_system_not_found();
+
+	if(Storages.isExistentStorage("../template/system/Initialize.tjs"))
+	{
+		Storages.addAutoPath("../template/system/");
+		Scripts.execStorage("../template/system/Initialize.tjs");
+	}
+	else if(Storages.isExistentStorage("../kag3/system/Initialize.tjs"))
+	{
+		Storages.addAutoPath("../kag3/system/");
+		Scripts.execStorage("../kag3/system/Initialize.tjs");
+	}
+	else
+	{
+		throw_system_not_found();
+	}
+}
+
+
