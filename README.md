@@ -24,3 +24,16 @@ here's my list of changes:
  - fixed aspect ratio
  - added a new title screen
  - added a seperate version of scenarios that i manually replaced or removed swear words from
+
+### > why are there still swears even though i said that i wanted it to be censored
+
+it's likely that the service worker wasn't functioning correctly.<br>
+to fix this you'll have to go to devtools, open the `Application` tab,<br>
+and unregister the service worker.
+
+![image](https://user-images.githubusercontent.com/101374892/205527816-ce2eccf3-6488-4d41-ab5e-6498e5e8d560.png)
+
+(click `Unregister` until it doesn't let you click it.)
+
+then, you can go to main menu and go back in and it should be fixed.<br>
+if not, then try reloading until it's fixed, i guess
