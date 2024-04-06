@@ -1,8 +1,12 @@
 <h1 align="center">
-  len burns down a skule
+  len burns down a skhool
 </h1>
 
 ![image](https://user-images.githubusercontent.com/101374892/205525362-5b630ebe-4144-4c70-a0c9-c4f47a749369.png)
+
+> :warning: this projekt will not be updated.<br>
+a better, but also dead projekt is to view available [here](https://github.com/raymonable/dev.lbdas.dx)<br>
+thanx for the support nonetheless
 
 ### > how do i play this super amazing visual novel
 
